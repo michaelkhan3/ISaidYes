@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "author": "michaelkhan31@gmail.com",
+    "name": "I said YES",
+    "description": "Chrome extension to automatically click the `Yes` on Stay signed in? Page",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://login.microsoftonline.com/*",
+                "https://developer.chrome.com/docs/extensions/*"
+            ],
+            "js": ["scripts/content.js"]
+        }
+    ]
+  }
