@@ -1,16 +1,16 @@
 {
     "manifest_version": 3,
     "author": "michaelkhan31@gmail.com",
-    "name": "I said YES",
+    "name": "Resize1C",
     "description": "Chrome extension to automatically click the `Yes` on Stay signed in? Page",
     "version": "1.0",
     "content_scripts": [
         {
             "matches": [
-                "https://login.microsoftonline.com/*",
-                "https://developer.chrome.com/docs/extensions/*"
+                "https://onecognizantbcazrapps.cognizant.com/*"
             ],
-            "js": ["scripts/content.js"]
+            "js": ["scripts/content.js"],
+            "all_frames":true
         }
     ]
   }

@@ -18,22 +18,23 @@ function waitForElm(selector) {
   });
 }
 
-console.log("I said YES is running!");
+function resizeElement(selector) {
+  waitForElm(selector).then(function(elm) {
+    // Find the main div on the page
+    const selectedElement = document.querySelector(selector);
+    
+    console.log(`Selected Element ${selectedElement}`)
+    
+    // Resize element
+    if (selectedElement) {
+      console.log(`Resizing ${selector}`);
+      selectedElement.style.cssText = 'height: 100vh !important';
+    }
+    
+  });
+}
 
-waitForElm('#idSIButton9').then(function(elm) {
-  // Find the "Yes" button on the page
-  const yesButton = document.querySelector('#idSIButton9');
-  
-  console.log(`Yes button ${yesButton}`)
-  
-  // Click the "Yes" button
-  if (yesButton) {
-    console.log("In click button");
-    yesButton.click();
-  }
-  
-});
+console.log("Resize1C is running!");
 
-
-
-
+// GoPerform div
+resizeElement('.main');
